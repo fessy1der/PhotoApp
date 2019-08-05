@@ -1,0 +1,14 @@
+﻿@model PhotoApp.Models.PhotoIndexModel
+
+<div class="container body-content">
+    <div class="photo-content">
+        @foreach(var image in Model.Images)
+        {
+        <div class="photo-container drop-shadow">
+            <a asp-controller="Photo" asp-action="PhotoDetail" asp-route-id="@image.Id">
+                <div class="photo" style="background-image:url(@image.Url)"></div> 
+            </a>
+        </div>
+        }
+    </div>
+</div>
